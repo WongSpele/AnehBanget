@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Funk De Beleza</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 24px;
+      border: none;
+      border-radius: 10px;
+      background-color: #00ff99;
+      color: #000;
+      cursor: pointer;
+    }
+
+    #lyrics {
+      margin-top: 40px;
+      font-size: 18px;
+      line-height: 1.6;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Funk De Beleza</h1>
+  <p>Credit By Wildan</p>
+  <button onclick="playMusic()">▶ Play</button>
+
+  <!-- Ganti link di bawah ini ke link GitHub kamu jika berbeda -->
+  <audio id="audio" src="https://wongspele.github.io/AnehBanget/Funk%20De%20Beleza.mp3"></audio>
+
+  <div id="lyrics">
+    <h3>Lirik (Placeholder)</h3>
+    <p>
+      🎵 Funk de beleza <br>
+      Ritmo naik tak terbendung<br>
+      Semua berdansa, sampai pagi datang<br>
+      Gerak bebas, nikmati suasana<br>
+      Dunia milik kita malam ini 🎵
+    </p>
+  </div>
+
+  <script>
+    function playMusic() {
+      const audio = document.getElementById("audio");
+      const lyrics = document.getElementById("lyrics");
+
+      if (audio.paused) {
+        audio.play();
+        lyrics.style.display = "block";
+      } else {
+        audio.pause();
+        lyrics.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
